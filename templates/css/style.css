@@ -1,4 +1,12 @@
 
+  #home {
+    height: 300vh;
+    width: 100%;
+    padding-top: 0%;
+    background-image:url(https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    background-repeat: repeat-y;
+  }
   body{
     background-image:url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');>
     background-attachment: fixed;
@@ -7,32 +15,34 @@
   }
   .jumbotron { 
     background-color:green;
-    color: white;
+    color: black;
     /* max-width: 200px; */
     text-align: center; 
   }
-.nav-link:hover{
-    background-color:White !important;
-  } 
   .navbar{
     background-color: rgb(134, 218, 134); 
     font-size: 15px;
-    list-style-type: none; 
+    list-style: none; 
 }
 .nav-item{
     list-style-type: none; 
-    display: flex;
+    list-style: none;
+    margin: 0;
     display: inline-block;
-    padding: 5px 15px;
-}
+    padding: 15px 15px 15px 15px;
+    overflow: hidden;
+  }     
 
 a{
     color: white;
-    font-size: 24px;  */
- /* container */
+    font-size: 24px; 
+}
+.nav-link:hover{
+    background-color:White !important;
+}
  p{
    color: black;
-   font-size: large;
+   font-size: 20px;
    text-align: center;
   }
  .container1 {
@@ -40,6 +50,7 @@ a{
     margin-left: 20px;
     margin-right:20px;
     background-color: white;
+    font:black;
     text-align: center;
     height: 600px;
   }
@@ -76,7 +87,7 @@ a{
   }
 
 
-.btn{
+.button{
     background-color: rgb(134, 218, 134);
     color: green;
     text-align: center;
@@ -88,11 +99,6 @@ a{
     margin-left:45%;
     margin-bottom: 5%;
 }
-
-select{
-    height: 25px;
-    width: 100%;
-  }
 
 .selection{
     height: 300px;

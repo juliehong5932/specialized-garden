@@ -20,7 +20,7 @@ var seasons=['Summer', 'Spring', 'Fall', 'Fall and Winter', 'Spring and Summer',
        'Winter', 'All']; 
 
 // d3.csv('data/machine_learning.csv').then(data=>{
-var statesSel=d3.select('#statesSelection');
+var statesSel=d3.select('#statesSelection').style("fill","black");
 var soilNeedsSel=d3.select('#soilNeedsSelection');
 var sunNeedsSel=d3.select('#sunNeedsSelection');
 var plantTypesSel=d3.select('#plantTypesSelection');
