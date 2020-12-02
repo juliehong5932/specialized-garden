@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+  </head>
+    <style>
+      body{
+          background-image:url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+      }
+      .navbar{
+          background-color: rgb(134, 218, 134); 
+          font-size: 15px;
+          list-style: none; 
+      }
+      .nav-item{
+          list-style: none; 
+          display: flex;
+          display: inline-block;
+          padding: 5px 15px;
+      }
+      
+      a{
+          color: white;
+          font-size: 24px; 
+      }
+      .nav-link:hover{
+          background-color:White !important;
+      }
+      .header {
+          padding: 10px;
+          height: 200px;
+          text-align: center;
+          background: darkgreen;
+          color: white;
+          font-size: 20px;
+      }
+      .box {
+        width: 800px;
+        height: 500px;
+        border: 5px ;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+      </style>
+  <body>
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('PlantType_chart')}}">Visualizations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('State')}}">Map</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="header">
+       <h1>The how</h1>
+       <h2>What did we use? <br>How did we do it?</h2>
+      </div>
+    </div>
+
+    <div class="box">
+            <img src="{{url_for('static', filename='image/better-tree.png')}}"align="middle" />
+            <p></p>
+            <img src="{{url_for('static', filename='image/better-tree2.png')}}"align="middle" />
+            <p></p>
+            <img src="{{url_for('static', filename='image/machinelearning1.png')}}"align="middle" />
+            <p>Machine Learning Data.</p>
+            <img src="{{url_for('static', filename='image/best-button.png')}}"align="middle" />
+            <p>Preparing selections for go button.</p>
+            <!-- <img src="{{url_for('static', filename='image/button.png')}}"align="middle" />
+            <p>Finalizing the go button.</p> -->
+            <img src="{{url_for('static', filename='image/visual.png')}}"align="middle" />
+            <p>Plant Type and Season chart code.</p>
+            <img src="{{url_for('static', filename='image/map1.png')}}"align="middle" />
+            <p>creation of map.</p>
+            <img src="{{url_for('static', filename='image/js2.png')}}"align="middle" />
+            <p>Creating inputs for html selections.</p>
+            <img src="{{url_for('static', filename='image/predict.png')}}"align="middle" />
+            <p>Giving the function to predict selections chosen.</p>
+          </div>
+     </div>
+  </body>
+
+</html>

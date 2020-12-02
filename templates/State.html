@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Map</title>
+  <link rel="icon" type="image/png" href='{{url_for("static", filename="image/icon.png")}}'>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/6.0.0/d3.js'></script>
+</head>
+    <style>
+        body{
+            background-image:url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .navbar{
+            background-color: rgb(134, 218, 134); 
+            font-size: 15px;
+            list-style: none; 
+        }
+        .nav-item{
+            list-style: none; 
+            display: flex;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+        
+        a{
+            color: white;
+            font-size: 24px; 
+        }
+        .nav-link:hover{
+            background-color:White !important;
+        }
+        .header {
+            padding: 10px;
+            height: 200px;
+            text-align: center;
+            background: darkgreen;
+            color: white;
+            font-size: 20px;
+        }
+        #map {
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    </style>
+<body>        
+    <div class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('PlantType_chart')}}">Visualizations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('Data')}}">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container-quest">
+        <div class="header">
+         <h1>Your Specialized Garden</h1>
+         <h2>Click your state to see examples of plants <br>that will thrive in your location ! </h2>
+         </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id='map' style='width: 750px; height: 550px'>
+            </div>
+        </div>
+    </div>
+ 
+    <script type="text/javascript" src='{{url_for("static", filename="js/us-states.js")}}'></script>
+    <script type="text/javascript" src='{{url_for("static", filename="js/app.js")}}'></script>
+
+
+
+
+</body>
+
+</html>
